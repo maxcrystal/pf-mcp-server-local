@@ -1,0 +1,35 @@
+{
+  "name": "pf-mcp-server-local",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "jam": "npx -y @mcpjam/inspector@latest --port 4000"
+  },
+  "keywords": [
+    "fastmcp",
+    "mcp",
+    "planfix"
+  ],
+  "repository": {
+    "url": "https://github.com/maxcrystal/pf-mcp-server-local"
+  },
+  "author": "Max Crystal <info@maxcrystal.ru>",
+  "homepage": "https://maxcrystal.ru",
+  "type": "module",
+  "license": "MIT",
+  "description": "Planfix MCP Server",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^16.4.5",
+    "fastmcp": "^3.13.0",
+    "zod": "^3.25.76",
+    "zod-to-json-schema": "^3.24.6"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": []
+  }
+}
