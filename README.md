@@ -283,6 +283,11 @@ npm install
 
 3. Configure your credentials in `.env`:
 ```bash
+cp .env.example .env
+```
+
+Edit `.env` to set your Planfix API credentials and server configuration:
+```bash
 # MCP Configuration
 PLANFIX_API_URL=https://your-account.planfix.ru/rest
 PLANFIX_API_TOKEN=YOUR_PLANFIX_API_TOKEN
