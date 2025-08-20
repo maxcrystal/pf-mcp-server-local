@@ -134,7 +134,9 @@ export const TaskCreateRequestSchema = z
       .max(3)
       .optional()
       .describe("Task priority: 1 - Low, 2 - Normal, 3 - High"),
-    status: z.number().int().optional().describe("Task status ID"),
+    status: BaseEntitySchema.optional().describe(
+      `Task status ID ${JSON.stringify(TASK_STATUSES)}`
+    ),
     type: BaseEntitySchema.optional().describe("Task type with id field"),
     assigner: PersonRequestSchema.optional().describe(
       "Task assigner with id field (format: 'user:1' or 'contact:3')"
@@ -221,7 +223,9 @@ export const TaskUpdateRequestSchema = z
       .max(3)
       .optional()
       .describe("Updated task priority: 1 - Low, 2 - Normal, 3 - High"),
-    status: z.number().int().optional().describe("Updated task status ID"),
+    status: BaseEntitySchema.optional().describe(
+      `Update task status ID ${JSON.stringify(TASK_STATUSES)}`
+    ),
     type: BaseEntitySchema.optional().describe(
       "Updated task type with id field"
     ),
